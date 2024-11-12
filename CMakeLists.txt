@@ -17,7 +17,7 @@ add_library(${PROJECT_NAME} SHARED ${SOURCES})
 #add_executable(${PROJECT_NAME} ${SOURCES})
 
 if(BUILD_PLATFORM STREQUAL "linux")
-    target_link_libraries(${PROJECT_NAME} -pthread -ldl -lm)
+    target_link_libraries(${PROJECT_NAME} -pthread)
 elseif(BUILD_PLATFORM STREQUAL "windows_mingw")
     set(CMAKE_C_FLAGS "-static")
     set(CMAKE_CXX_FLAGS "-static")
